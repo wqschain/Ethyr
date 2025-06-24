@@ -6,6 +6,45 @@ A chrome extension for analyzing Ethereum addresses, smart contracts, and tokens
 
 Ethyr is a personal tool I developed to help analyze Ethereum addresses and contracts for potential risks and gather detailed insights. While it started as a personal project to assist with my own blockchain interactions, I've decided to share it with the community to help others make more informed decisions when interacting with the Ethereum ecosystem.
 
+## Tech Stack
+
+### Frontend
+- React 18.2.0 with TypeScript 4.9.5
+- Tailwind CSS 3.3.5 for styling
+- Vite 4.5.0 for build tooling
+- Chrome Extensions Manifest V3
+- Web3.js 4.2.2 for blockchain interactions
+- Framer Motion 12.18.1 for animations
+- Heroicons for UI elements
+
+### Backend
+- Python 3.11+
+- FastAPI 0.104.1 with Uvicorn 0.24.0
+- Web3.py 6.11.3 for Ethereum interaction
+- python-dotenv 1.0.0 for environment management
+- aiohttp 3.9.1 for async HTTP requests
+- Pydantic 1.10.13 for data validation
+
+### AI/ML
+- Hugging Face Transformers for model inference
+- Mistral 7B for natural language explanations
+- PyTorch for deep learning models
+- PyTorch Geometric for graph neural networks
+- Custom Models:
+  - TLMG4ETH: Transaction Language Model with Graph Neural Network
+  - MetaIFD: Meta-Interaction Fraud Detection
+- Risk Detection Pipeline with heuristic rules
+
+### Blockchain Integration
+- Ethereum Mainnet
+- Etherscan API
+- Alchemy API
+- Uniswap V2/V3 integration
+- ERC20/ERC721 standard support
+- eth-abi 5.0.0 for ABI encoding/decoding
+- eth-account 0.9.0 for account management
+- eth-typing 3.5.0 and eth-utils 2.2.0
+
 ## Installation & Setup
 
 ### Prerequisites
