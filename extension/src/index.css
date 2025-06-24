@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 0.6s;
+}
+
+.chrome-text {
+  color: #E8E8E8;
+  text-shadow: 
+    0 0 1px rgba(255, 255, 255, 0.3),
+    0 0 2px rgba(255, 255, 255, 0.2),
+    0 0 3px rgba(150, 170, 255, 0.2),
+    0 0 4px rgba(150, 170, 255, 0.1);
+  letter-spacing: 1px;
+}
+
+@layer base {
+  html {
+    font-family: 'Manrope', system-ui, sans-serif;
+  }
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+  * {
+    @apply transition-all duration-200;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+  p {
+    font-family: 'Manrope', system-ui, sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+  width: 350px;
+  min-height: 400px;
+  overflow-x: hidden;
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Analysis section styles */
+.analysis-section {
+  @apply space-y-2 p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 backdrop-blur-sm;
+}
+
+.analysis-title {
+  @apply text-lg font-semibold text-gray-100 mb-3;
+}
+
+.analysis-text {
+  @apply text-sm text-gray-300 leading-relaxed;
+}
+
+.analysis-highlight {
+  @apply font-medium text-blue-400;
+}
+
+/* Card styles */
+.info-card {
+  @apply p-3 bg-gray-800/80 rounded-lg border border-gray-700/50 backdrop-blur-sm transition-all duration-200 hover:bg-gray-800;
+}
+
+.info-card-title {
+  @apply text-sm font-medium text-gray-100 mb-2;
+}
+
+.info-card-content {
+  @apply text-sm text-gray-300;
+} 
