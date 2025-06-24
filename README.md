@@ -73,25 +73,62 @@ You'll need the following API keys:
 ## Features
 
 ### Smart Contract Analysis
-- Contract verification status
-- Source code analysis
-- Risk assessment
-- Ownership analysis
-- Token contract detection
+- Contract verification status check
+- Source code analysis and risk detection
+- Token contract detection and analysis
+- Ownership and permission analysis
+- Mint/burn event tracking
+- Liquidity lock verification
 
 ### Token Analysis
-- Market data and liquidity information
-- Holder activity metrics
-- Trading patterns
-- Risk indicators
+- Market data (price, volume, liquidity)
+- Holder activity metrics and whale analysis
+- Trading pattern detection
+- DEX distribution analysis
+- Buy/sell ratio tracking
+- Contract interaction analysis
 
 ### Wallet Analysis
-- Transaction history
-- DeFi interactions
-- Token holdings
-- Risk assessment
+- Transaction history and patterns
+- ETH balance and value flow tracking
+- DeFi protocol interactions
+- Unique address interactions
+- Gas usage analysis
 
-## Version 1 Limitations
+### Risk Assessment
+- AI-powered risk scoring
+- Detailed risk explanations
+- Risk tier classification
+- Pattern-based threat detection
+- Multi-factor security analysis
+- Historical behavior analysis
+
+### User Interface
+- Clean, modern design with animated elements
+- Real-time scanning visualization
+- Tabbed interface for different analysis views
+- Detailed metrics and statistics display
+- Interactive data visualization
+- Mobile-responsive layout
+
+## Technical Architecture
+
+### Frontend (Chrome Extension)
+- React-based UI with TypeScript
+- Real-time blockchain data visualization
+- Interactive analysis dashboard
+- Animated background with node visualization
+- Metallic UI elements for better user experience
+
+### Backend (Python FastAPI)
+- FastAPI server for handling blockchain queries
+- Advanced risk detection pipeline
+- Integration with Ethereum nodes
+- Caching layer for improved performance
+- Comprehensive blockchain utilities
+
+
+## v1 Limitations
 
 Please note that this is version 1 of the tool and has some limitations:
 
@@ -163,63 +200,6 @@ Ethyr/
 - Incorporates multiple types of blockchain interactions for comprehensive analysis
 
 Note: The analysis and predictions provided by these models may not be 100% accurate and should be used as one of many tools in your research process.
-
-## Features
-
-### Smart Contract Analysis
-- Contract verification status check
-- Source code analysis and risk detection
-- Token contract detection and analysis
-- Ownership and permission analysis
-- Mint/burn event tracking
-- Liquidity lock verification
-
-### Token Analysis
-- Market data (price, volume, liquidity)
-- Holder activity metrics and whale analysis
-- Trading pattern detection
-- DEX distribution analysis
-- Buy/sell ratio tracking
-- Contract interaction analysis
-
-### Wallet Analysis
-- Transaction history and patterns
-- ETH balance and value flow tracking
-- DeFi protocol interactions
-- Unique address interactions
-- Gas usage analysis
-
-### Risk Assessment
-- AI-powered risk scoring
-- Detailed risk explanations
-- Risk tier classification
-- Pattern-based threat detection
-- Multi-factor security analysis
-- Historical behavior analysis
-
-### User Interface
-- Clean, modern design with animated elements
-- Real-time scanning visualization
-- Tabbed interface for different analysis views
-- Detailed metrics and statistics display
-- Interactive data visualization
-- Mobile-responsive layout
-
-## Technical Architecture
-
-### Frontend (Chrome Extension)
-- React-based UI with TypeScript
-- Real-time blockchain data visualization
-- Interactive analysis dashboard
-- Animated background with node visualization
-- Metallic UI elements for better user experience
-
-### Backend (Python FastAPI)
-- FastAPI server for handling blockchain queries
-- Advanced risk detection pipeline
-- Integration with Ethereum nodes
-- Caching layer for improved performance
-- Comprehensive blockchain utilities
 
 ## Personal Note
 I created Ethyr as a tool to help me analyze blockchain addresses and contracts more efficiently. As someone actively involved in the Ethereum ecosystem, I found myself repeatedly performing the same checks and analysis when interacting with new contracts or addresses. This tool automates that process and provides a comprehensive overview of potential risks and important metrics. 
