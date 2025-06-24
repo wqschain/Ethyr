@@ -17,27 +17,28 @@ Ethyr is a personal tool I developed to help analyze Ethereum addresses and cont
 ### Backend Setup
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/ethyr.git
+git clone https://github.com/wqschain/ethyr.git
 cd ethyr
 ```
 
-2. Set up Python virtual environment
+2. Set up Python environment and install dependencies
 ```bash
-cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+cd backend
 pip install -r requirements.txt
 ```
 
-3. Configure environment variables
+3. Download model files
 ```bash
-cp .env.example .env
-# Edit .env with your API keys
+python download_models.py
 ```
 
-4. Start the backend server
-```bash
-uvicorn app:app --reload
+4. Set up environment variables
+Create a `.env` file in the backend directory with:
+```
+ETHERSCAN_API_KEY=your_key_here
+ALCHEMY_API_KEY=your_key_here
 ```
 
 ### Frontend Setup
@@ -52,51 +53,71 @@ npm install
 npm run build
 ```
 
-3. Load the extension in Chrome
-- Open Chrome and navigate to `chrome://extensions/`
-- Enable "Developer mode"
-- Click "Load unpacked" and select the `extension/build` directory
+3. Load the extension in Chrome:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked" and select the `extension/dist` directory
 
-## API Keys Required
+## API Keys
 
-The following API keys are needed for full functionality:
-
-1. **Etherscan API Key**
-   - Required for: Transaction history, contract verification
-   - Get it from: [Etherscan](https://etherscan.io/apis)
-   - Environment variable: `ETHERSCAN_API_KEY`
-
-2. **Alchemy API Key**
-   - Required for: Token metadata, NFT data
-   - Get it from: [Alchemy](https://www.alchemy.com/)
-   - Environment variable: `ALCHEMY_API_KEY`
+You'll need the following API keys:
+- [Etherscan API Key](https://etherscan.io/apis)
+- [Alchemy API Key](https://www.alchemy.com/)
 
 ## Usage
 
 1. Click the Ethyr extension icon in Chrome
-2. Enter an Ethereum address (wallet, contract, or token)
-3. Click "Scan" to analyze
-4. View results in different tabs:
-   - Overview: General information and risk assessment
-   - Tokens: Token-specific analysis (for token contracts) or holdings (for wallets)
-   - DeFi: DEX information or DeFi protocol interactions
+2. Enter an Ethereum address or contract
+3. View the comprehensive analysis and risk assessment
 
-## Contributing
+## Features
 
-This is a personal project that I'm actively developing. While I appreciate interest in contributing, please note that I'm currently focused on implementing my vision for the tool. However, feel free to:
+### Smart Contract Analysis
+- Contract verification status
+- Source code analysis
+- Risk assessment
+- Ownership analysis
+- Token contract detection
 
-1. Report bugs by opening issues
-2. Suggest features
-3. Fork the project for your own use
+### Token Analysis
+- Market data and liquidity information
+- Holder activity metrics
+- Trading patterns
+- Risk indicators
+
+### Wallet Analysis
+- Transaction history
+- DeFi interactions
+- Token holdings
+- Risk assessment
+
+## Version 1 Limitations
+
+Please note that this is version 1 of the tool and has some limitations:
+
+### Performance
+- Some analyses may take a few seconds to complete
+- Complex contracts may require additional processing time
+
+### Feature Stability
+- Token price data may have delays
+- Some advanced contract interactions may not be fully analyzed
+- Risk assessment is based on known patterns and may not catch new types of risks
+
+### Analysis Accuracy
+- Risk scores are indicative and should not be the sole basis for decisions
+- Market data accuracy depends on available liquidity and sources
+- Some contract features may require manual verification
 
 ## Contact & Support
 
+For questions, suggestions, or issues:
 - Twitter: [@wqschain](https://x.com/wqschain)
-- For issues and feature requests, please use GitHub Issues
+- GitHub Issues: [Create an issue](https://github.com/wqschain/ethyr/issues)
 
 ## Disclaimer
 
-The analysis and predictions provided by Ethyr are based on available on-chain data and pattern recognition. This tool should be used as one of many resources in your research process, not as the sole decision-maker. Always conduct your own due diligence before interacting with any smart contracts or tokens.
+The information provided by Ethyr is for informational purposes only and should not be considered as financial advice. Always conduct your own research and due diligence before interacting with any smart contracts or tokens.
 
 ## License
 
@@ -119,32 +140,6 @@ Ethyr/
 │   │   └── styles/        # CSS and styling
 │   └── public/            # Static assets
 ```
-
-## Version 1 Limitations
-
-As this is the first version of Ethyr, there are some known limitations and features that may not work as intended:
-
-1. Performance Limitations
-   - Large token holder analysis may timeout for tokens with extensive transaction history
-   - DEX volume calculations might be delayed for high-activity pools
-   - Some contract analysis features may take longer than expected
-
-2. Feature Stability
-   - NFT analysis is currently limited and may not capture all NFT-related activities
-   - Some DeFi protocol interactions might not be properly categorized
-   - Whale analysis thresholds may need adjustment based on token specifics
-
-3. UI/UX Considerations
-   - The extension currently works best on desktop Chrome
-   - Some animations might not render smoothly on lower-end devices
-   - Real-time updates are not yet implemented
-
-4. Analysis Accuracy
-   - Risk scoring is based on current patterns and may need refinement
-   - Some contract verification checks might have false positives
-   - Market data might have slight delays or inconsistencies
-
-Please note that this is an actively developed project, and these limitations will be addressed in future updates.
 
 ## AI Models Used
 
