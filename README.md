@@ -201,5 +201,11 @@ Ethyr/
 
 Note: The analysis and predictions provided by these models may not be 100% accurate and should be used as one of many tools in your research process.
 
+## Project Demo
+
+This is a quick demo of the project. Click below to watch it on YouTube:
+
+[![Watch the Demo](https://img.youtube.com/vi/spL9O-oQoso/hqdefault.jpg)](https://www.youtube.com/watch?v=spL9O-oQoso)
+
 ## Personal Note
 I created Ethyr as a tool to help me analyze blockchain addresses and contracts more efficiently. As someone actively involved in the Ethereum ecosystem, I found myself repeatedly performing the same checks and analysis when interacting with new contracts or addresses. This tool automates that process and provides a comprehensive overview of potential risks and important metrics. 
